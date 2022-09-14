@@ -233,7 +233,7 @@ class ParkingEndResource(Resource) :
                         o.parking_chrge_bs_chrg,o.parking_chrge_bs_time,o.parking_chrge_adit_unit_time,o.parking_chrge_adit_unit_chrge, o.parking_chrge_one_day_chrge,
 	                    round(6371*acos(cos(radians({}))*cos(radians(prk_plce_entrc_la))*cos(radians(prk_plce_entrc_lo)
 	                    -radians({}))+sin(radians({}))*sin(radians(prk_plce_entrc_la)))*1000)
-	                    AS distance
+	                    AS distance, '' as img_prk
                         FROM facility f
                         join operation o
                         on f.prk_center_id = o.prk_center_id
