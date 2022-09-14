@@ -23,7 +23,7 @@ class Operation(Resource) :
 
         queryString = "?" + urlencode(
             {
-                'serviceKey' : unquote('ykQRQe33B%2FuTfH1YE9VL1jd1nkhXlunIYsMBD0nFOx%2BgSHLAJW9ahX3086HY2Q5SIow0WqyekQK8z9wvUw9F3A%3D%3D'),
+                'serviceKey' : unquote('serviceKey'),
                 'pageNo' : 1,
                 'numOfRows' : 10000,
                 'format' : 2
@@ -70,7 +70,7 @@ class Operation(Resource) :
 
             queryString = "?" + urlencode(
                 {
-                    'serviceKey' : unquote('ykQRQe33B%2FuTfH1YE9VL1jd1nkhXlunIYsMBD0nFOx%2BgSHLAJW9ahX3086HY2Q5SIow0WqyekQK8z9wvUw9F3A%3D%3D'),
+                    'serviceKey' : unquote('serviceKey'),
                     'pageNo' : count,
                     'numOfRows' : 10000,
                     'format' : 2
@@ -117,7 +117,7 @@ class Operation(Resource) :
 
         print(df)
         
-        engine = create_engine("mysql://parking_partner_user:1234@database-1.c8z17ubvxzpp.ap-northeast-2.rds.amazonaws.com/parking_partner_db")
+        engine = create_engine("db connection string")
         conn = engine.connect()
         df.to_sql('op_test', engine, if_exists='append', index=False)
 

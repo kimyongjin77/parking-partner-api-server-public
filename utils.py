@@ -12,5 +12,3 @@ def check_password(original_password, hashed_password) :
     salt = 'SEED'
     check = pbkdf2_sha256.verify(original_password+salt, hashed_password)   
     return check
-
-    
