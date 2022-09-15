@@ -442,7 +442,7 @@ class UserLoginResource(Resource) :
             connection = get_connection()
 
             # 2-1. 로그인 정보 확인
-            query = '''select email, name, img_profile
+            query = '''select email, name, ifnull(img_profile, '') img_profile
                         from user
                         where email = %s'''
             record = (email , )
